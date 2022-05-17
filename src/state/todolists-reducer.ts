@@ -1,5 +1,5 @@
 import {userReducer} from "./user-reducer";
-import {TodolistType} from "../App";
+import {FilterValuesType, TodolistType} from "../App";
 import {colors} from "@material-ui/core";
 
 
@@ -45,7 +45,7 @@ export const changeTodolistTitleAC = (id: string, title: string) => {
 }
 
 type changeFilterACType = ReturnType<typeof changeFilterAC>
-export const changeFilterAC = (id: string, filter: string) => {
+export const changeFilterAC = (id: string, filter: FilterValuesType) => {
     return {
         type: 'CHANGE-TODOLIST-FILTER',
         payload: {id, filter}
