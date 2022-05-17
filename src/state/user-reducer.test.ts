@@ -8,12 +8,13 @@ test.skip("reducer should increment only age", ()=> {
     expect(endState.childrenCount).toBe(0)
 });
 
-test ("name should be changed", ()=> {
+test.skip ("name should be changed", ()=> {
     const startState = { age: 33, childrenCount: 0, name: "Kate"}
     const endState = userReducer (startState, {type: "CHANGE-NAME", name: "Jul"})
 
     expect(endState.name).toBe("Jul")
 })
+
 
 
 
